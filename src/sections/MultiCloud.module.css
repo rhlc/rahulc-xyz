@@ -1,0 +1,86 @@
+.section {
+  position: relative;
+}
+
+.stage {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(5.5rem, 10vh, 7rem) var(--gutter) 2rem;
+  max-width: calc(var(--content-max) + 2 * var(--gutter));
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-top: 1.25rem;
+}
+
+.scene {
+  width: 100%;
+  max-height: 52svh;
+  margin-top: 1rem;
+  flex: 1;
+}
+
+.chipBox {
+  fill: var(--bg-panel);
+  stroke: var(--line-strong);
+}
+
+.chipLabel {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  fill: var(--text);
+}
+
+.coreLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  fill: var(--green);
+}
+
+.coreCounter {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  fill: var(--text-dim);
+}
+
+.beats {
+  position: relative;
+  min-height: 4.5rem;
+  margin-top: 0.5rem;
+}
+
+.beat {
+  color: var(--text-dim);
+  max-width: 56ch;
+  font-size: var(--text-body);
+}
+
+/* when pinned+animated, beats stack and crossfade; statically they list */
+.section[data-animated] .beat {
+  position: absolute;
+  inset: 0 auto auto 0;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .scene {
+    max-height: 44svh;
+  }
+}

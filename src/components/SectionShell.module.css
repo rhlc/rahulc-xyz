@@ -1,0 +1,15 @@
+.section {
+  position: relative;
+  padding: var(--space-section) var(--gutter);
+  max-width: calc(var(--content-max) + 2 * var(--gutter));
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+}

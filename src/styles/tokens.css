@@ -1,0 +1,33 @@
+:root {
+  /* phosphor terminal palette */
+  --bg: #060a08;
+  --bg-raised: #0a120d;
+  --bg-panel: #0d1711;
+  --green: #00ff9c;
+  --green-dim: #00b86f;
+  --amber: #ffb454;
+  --text: #d7e2da;
+  --text-dim: #8a9a8e;
+  --text-faint: #4a5a4e;
+  --line: rgba(0, 255, 156, 0.14);
+  --line-strong: rgba(0, 255, 156, 0.32);
+
+  /* glow recipes */
+  --glow-green: 0 0 12px rgba(0, 255, 156, 0.55), 0 0 48px rgba(0, 255, 156, 0.18);
+  --glow-amber: 0 0 12px rgba(255, 180, 84, 0.5), 0 0 40px rgba(255, 180, 84, 0.15);
+
+  /* type */
+  --font-display: 'Clash Display', 'IBM Plex Mono', monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --text-hero: clamp(3rem, 11vw, 8.5rem);
+  --text-h2: clamp(2rem, 5.5vw, 4.25rem);
+  --text-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-body: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  --text-small: 0.8125rem;
+  --text-tiny: 0.6875rem;
+
+  /* spacing */
+  --space-section: clamp(6rem, 14vh, 10rem);
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --content-max: 72rem;
+}

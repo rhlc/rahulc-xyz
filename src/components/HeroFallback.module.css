@@ -1,0 +1,39 @@
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.ring {
+  fill: none;
+  stroke: rgba(0, 255, 156, 0.14);
+}
+
+.core {
+  fill: rgba(0, 255, 156, 0.08);
+  stroke: rgba(0, 255, 156, 0.4);
+  filter: drop-shadow(0 0 18px rgba(0, 255, 156, 0.4));
+}
+
+.coreInner {
+  fill: none;
+  stroke: rgba(0, 255, 156, 0.3);
+  stroke-dasharray: 3 5;
+}
+
+.link {
+  stroke: rgba(0, 255, 156, 0.12);
+}
+
+.node {
+  fill: var(--green-dim);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  fill: var(--text-faint);
+}

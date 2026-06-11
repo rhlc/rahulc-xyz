@@ -1,0 +1,96 @@
+.section {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.body {
+  margin-top: 1.25rem;
+  color: var(--text-dim);
+  max-width: 50ch;
+}
+
+.hex {
+  width: clamp(7rem, 14vw, 10rem);
+  margin-top: 2rem;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 156, 0.35));
+}
+
+.hexLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  fill: var(--green);
+}
+
+.card {
+  border: 1px solid var(--line-strong);
+  background: var(--bg-raised);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 180, 84, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.cardKicker {
+  font-size: var(--text-small);
+  color: var(--amber);
+}
+
+.cardName {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-top: 0.75rem;
+  color: var(--text);
+  text-shadow: 0 0 20px rgba(255, 180, 84, 0.35);
+}
+
+.cardDesc {
+  margin-top: 1rem;
+  color: var(--text-dim);
+  font-size: var(--text-small);
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.tags li {
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.7rem;
+  font-size: var(--text-tiny);
+  letter-spacing: 0.1em;
+  color: var(--green-dim);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
